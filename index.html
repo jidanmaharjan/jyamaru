@@ -1,6 +1,4 @@
-<?php
-    session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +15,7 @@
     <div class="bodylimit">
     <nav>
         <div class="mainnavitems">
-         <a href="index.php"><div class="brand">
+         <a href="index.html"><div class="brand">
             <h4 class="primary">
                 Jya
             </h4>
@@ -172,7 +170,7 @@
 
 <section class="footer">
     <h4>
-        Copyright &copy; <?php echo date('Y');?>. All rights reserved.
+        Copyright &copy; 2021. All rights reserved.
     </h4>
 </section>
 
@@ -183,7 +181,7 @@
 <script>
 const colorswitch = document.getElementById('dmswitch');
 colorswitch.addEventListener('click',checkMode);
-function checkMode{
+function checkMode(){
     if (colorswitch.checked){
         darkModeOn();
 }
