@@ -17,6 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" href="assets/graph-bar.svg">
     <title>JyaMaru</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -37,24 +38,24 @@
   <body>
     <div class="bodylimit">
       <nav>
-        <div class="mainnavitems">
-          <a href=""
-            ><div class="brand">
-              <h4 class="primary">Jya</h4>
-              <h4 class="secondary">Maru</h4>
-            </div></a
-          >
-          <i class="fas fa-bars" onclick="navbarToggle()"></i>
-        </div>
-        <div>
-          <ul id="toggleId">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#service">Our Services</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </div>
+        <a href=""
+          ><div class="brand">
+            <h4 class="primary">Jya</h4>
+            <h4 class="secondary">Maru</h4>
+          </div></a
+        >
+
+        
+        <ul id="toggleId">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#service">Our Services</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <span>
+          <img src="assets/apps.svg" alt="" class="menu" onclick="navbarToggle()">
+          <img src="assets/half-moon.svg" id="dmtoggler" alt="" /></span>
       </nav>
 
       <section class="home" id="home">
@@ -64,23 +65,21 @@
 
           <a href="#contact"
             ><button class="btn">
-              Contact Us <i class="fas fa-arrow-right"></i></button
+              <i class="fas fa-address-book"></i> Contact Us </button
           ></a>
         </div>
 
-        <img src="assets/logocolor.png" alt="" />
+        <img src="assets/tech.webp" alt="" />
       </section>
 
       <section class="about-us" id="about-us">
+        <h1>About Us</h1>
         <div class="about-content">
-          <h1>About Us</h1>
-
-          <div class="about-subcontent">
-            <div class="about-image">
+          
               <img src="assets/buildings.png" alt="" />
-            </div>
+            
             <div class="about-paragraph">
-              <h3>"Believe in us!"</h3>
+              <h2>"Believe in us!"</h2>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
                 ullam laudantium, possimus dolorum veritatis corrupti adipisci
@@ -91,13 +90,13 @@
                 nisi. Inventore!
               </p>
             </div>
-          </div>
+          
         </div>
       </section>
 
       <section class="services" id="service">
-        <h1>What we do</h1>
-        <p>We provide these services</p>
+        <h1>Our Services</h1>
+        
         <div class="servicecontent">
           <div class="serviceitem">
             <img src="assets/webdesign.svg" alt="" />
@@ -181,22 +180,5 @@
     </div>
 
     <script src="js/navbar.js"></script>
-    <script>
-      const colorswitch = document.getElementById("dmswitch");
-      colorswitch.addEventListener("click", checkMode);
-      function checkMode() {
-        if (colorswitch.checked) {
-          darkModeOn();
-        } else {
-          darkModeOff();
-        }
-        function darkModeOn() {
-          document.section.classList.add("dark-mode");
-        }
-        function darkModeOff() {
-          document.section.classList.remove("dark-mode");
-        }
-      }
-    </script>
   </body>
 </html>
