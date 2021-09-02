@@ -368,9 +368,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  html {
-    font-size: 55%;
-  }
   .servicecontent {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -500,8 +497,8 @@ p {
 }
 
 .contact {
-  padding-top: 6rem;
   width: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -509,13 +506,94 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.footer {
-  padding: 1rem;
-  text-align: center;
+.contact h1 {
+  margin-bottom: 3rem;
+}
+
+.contact .contactcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, right top, from(#f1664e), to(#a851ff));
+  background: linear-gradient(to right, #f1664e, #a851ff);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5rem;
+  padding: 2rem;
+}
+
+.contact .contactcontent form {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.contact .contactcontent form input {
   width: 100%;
+  padding: 1rem 2rem;
+  margin: .5rem;
+  border-radius: 4rem;
+  border: none;
+  outline: none;
+}
+
+.contact .contactcontent form textarea {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: .5rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+}
+
+.contact .contactcontent form button {
+  border: 1px solid #a851ff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: #a851ff;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact .contactcontent form button:hover {
+  background: transparent;
+  color: #a851ff;
+}
+
+.contact .contactcontent img {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .contact {
+    padding: 2rem;
+    padding-bottom: 3rem;
+  }
+  .contact .contactcontent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact .contactcontent img {
+    width: 100%;
+  }
 }
 
 #dmtoggler {
@@ -555,6 +633,12 @@ p {
 @media (max-width: 1440px) {
   html {
     font-size: 62.5%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
   }
 }
 /*# sourceMappingURL=main.css.map */
