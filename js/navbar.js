@@ -5,7 +5,7 @@ function navbarToggle()
 {
     if(toggle == 0)
     {
-        value.style.bottom = "4.5rem";
+        value.style.bottom = "5.5rem";
         toggle = 1;
     }
     else

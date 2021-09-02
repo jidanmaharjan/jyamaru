@@ -6,7 +6,7 @@
 }
 $textcolor: #000;
 $textcolorreverse: #fff;
-$paracolor: #777;
+$paracolor: #999;
 $primarycolor: #f1664e;
 $secondarycolor: #a851ff;
 $background-color: #fff;
@@ -70,7 +70,7 @@ nav {
     display: none;
   }
   .menu {
-    width: 2rem;
+    width: 2.5rem;
     display: none;
   }
 }
@@ -84,30 +84,49 @@ nav {
     height: 5rem;
     ul {
       bottom: -100%;
-      left: 0;
-
+      right: 1rem;
+      
       position: fixed;
-      flex-direction: column;
-      background: $primarycolor;
-      width: 100%;
+      justify-content: center;
+      background: $background-color;
+      flex-direction: row;
       padding: 1rem 0;
       transition: 0.5s;
       border: 0.1rem solid $primarycolor;
       border-radius: 0.5rem;
+      li{
+        padding: .5rem 0.5rem;
+      }
     }
+    
     a {
       font-size: 1.4rem;
+      span{
+        display: none;
+      }
     }
 
     .menu {
       cursor: pointer;
       display: inline;
-
+      
       margin-right: 1rem;
+    }
+    .fas {
+      display: inline;
+      font-size: 2.5rem;
+      color: $primarycolor;
     }
   }
 }
-
+.primary-text{
+  color: $primarycolor;
+  font-weight: 800;
+}
+.secondary-text{
+  color: $secondarycolor;
+  font-weight: 800;
+}
 .brand {
   display: flex;
   position: relative;
@@ -115,44 +134,92 @@ nav {
   .primary {
     color: $primarycolor;
     transition: 0.3s;
+    font-weight: 600;
   }
   .secondary {
     color: $secondarycolor;
     transition: 0.3s;
+    font-weight: 600;
   }
 }
 
 .home {
   width: 100%;
+  height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   .homedescription {
     flex-basis: 45%;
+    width: 100%;
+    padding: 2rem;
+    p{
+      margin: 2rem 0;
+    }
   }
   img {
     flex-basis: 45%;
-    width: 100%;
+    width: 50%;
+    max-width: 100%;
     object-fit: contain;
   }
 }
 @media (max-width: 800px) {
   .home {
     flex-direction: column-reverse;
+    .homedescription{
+      margin-bottom: 20%;
+    }
+    img{
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+  body{
+    text-align: justify;
+    
   }
 }
 
 .btn {
-  border-style: none;
+  border: 1px solid $primarycolor;
   font-size: 1.8rem;
   font-weight: 500;
   background: $primarycolor;
   color: $textcolorreverse;
-  padding: 1rem;
-  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 4rem;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  &:hover{
+    background: transparent;
+    color: $primarycolor;
+  }
 }
+.btn-rev{
+  border: 1px solid $secondarycolor;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background: transparent;
+  color: $secondarycolor;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  &:hover{
+    background: $secondarycolor;
+    color: $textcolorreverse;
+  }
+}
+.buttons{
+  display: flex;
+  
+  flex-wrap: wrap;
+}
+
 h1 {
   font-size: 3.6rem;
   font-weight: 700;
@@ -191,9 +258,10 @@ p {
 }
 
 .services {
-    padding-top: 6rem;
+  
   transition: 0.5s ease;
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -236,45 +304,53 @@ p {
 }
 
 //about us
-.about-us {
-  padding-top: 6rem;
+.about-us{
+  
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align:justify;
+  
   h1{
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
   }
   .about-content {
     display: flex;
     justify-content: space-between;
+    
     img {
-      width: 50%;
-      height: 50%;
+      width: 100%;
+      padding: 0 2rem;
       flex-basis: 50%;
       object-fit: contain;
     }
     .about-paragraph {
         
-        padding: 1rem;
+        padding: 2rem;
       flex-basis: 50%;
 
-      h2{
-        padding-bottom: 0.5rem;
+      h4{
+        padding-bottom: 1rem;
       }
-      
+      p{
+        margin-bottom: 3rem;
+      }
     }
   }
 }
 
 @media (max-width: 800px) {
     .about-us{
+      margin: 0;
         .about-content{
             flex-direction: column;
             align-items: center;
             .about-paragraph{
-                text-align: center;
-                margin-top: 3rem;
+                text-align: justify;
+                margin-top: 1rem;
             }
         }
     }
@@ -319,7 +395,7 @@ p {
 }
 
 #dmtoggler {
-  width: 2rem;
+  width: 2.5rem;
   cursor: pointer;
 }
 
@@ -329,7 +405,7 @@ p {
   nav {
     background: $background-color-dm;
     ul {
-      
+      background: $background-color-dm;
     }
     a {
       color: $textcolorreverse;
@@ -338,5 +414,18 @@ p {
         transition: 0.3s;
       }
     }
+  }
+}
+
+@media(max-width:2180px)
+{
+  html{
+    font-size: 80%;
+  }
+}
+@media(max-width:1440px)
+{
+  html{
+    font-size: 62.5%;
   }
 }
