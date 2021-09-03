@@ -34,6 +34,8 @@ let vid = document.getElementById("worksvideo");
 let x = window.matchMedia("(max-width:512px)")
 work(x);
 x.addListener(work);
+vid.muted = true;
+vid.play();
 
 let dm = document.getElementById("dmtoggler");
 
