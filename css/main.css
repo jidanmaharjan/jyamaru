@@ -431,6 +431,10 @@ p {
       flex-basis: 50%;
 }
 
+.about-us .about-content .about-paragraph .btn-rev {
+  margin-right: 1rem;
+}
+
 .about-us .about-content .about-paragraph h4 {
   padding-bottom: 1rem;
 }

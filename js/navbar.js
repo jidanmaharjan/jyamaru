@@ -1,3 +1,5 @@
+import smoothscroll from 'smoothscroll-polyfill';
+
 
 var value = document.getElementById("toggleId");
 var toggle = 0;
@@ -36,6 +38,8 @@ work(x);
 x.addListener(work);
 vid.muted = true;
 vid.play();
+smoothscroll.polyfill();
+window.__forceSmoothScrollPolyfill__ = true;
 
 let dm = document.getElementById("dmtoggler");
 
