@@ -20,6 +20,20 @@ value.onclick = function()
         toggle = 0;
 }
 
+function work(x){
+    if(x.matches)
+    {
+        vid.src="assets/testwork34.mp4";
+    }
+    else{
+        vid.src="assets/testwork219.mp4";
+    }
+
+}
+let vid = document.getElementById("worksvideo");
+let x = window.matchMedia("(max-width:512px)")
+work(x);
+x.addListener(work);
 
 let dm = document.getElementById("dmtoggler");
 

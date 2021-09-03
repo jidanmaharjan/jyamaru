@@ -317,7 +317,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align:justify;
+  
   
   h1{
       margin-bottom: 4rem;
@@ -327,10 +327,10 @@ p {
     justify-content: space-between;
     
     img {
-      width: 100%;
+      width: 50%;
       padding: 0 2rem;
       flex-basis: 50%;
-      object-fit: contain;
+      object-fit:contain;
     }
     .about-paragraph {
         
@@ -350,10 +350,16 @@ p {
 @media (max-width: 800px) {
     .about-us{
       margin: 3rem 0;
+      h1{
+        margin: 2rem 0;
+      }
       justify-content: flex-start;
         .about-content{
             flex-direction: column;
             align-items: center;
+            img{
+              width: 100%;
+            }
             .about-paragraph{
                 text-align: justify;
                 margin-top: 1rem;
@@ -363,28 +369,35 @@ p {
 }
 
 .works {
-    padding-top: 6rem;
+
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  .slider {
-    display: flex;
-    align-items: center;
-    .leftcard {
-      flex-basis: 30%;
-    }
-    .rightcard {
-      flex-basis: 30%;
-    }
-    .midcard {
-      flex-basis: 40%;
-    }
-    img {
-      width: 100%;
-    }
+  h1{
+    margin-bottom: 2rem;
   }
 }
+#worksvideo{
+  width: 100%;
+  border-radius: .5rem;
+  z-index: -1;
+  object-fit: contain;
+}
+@media(max-width: 800px)
+{
+  .works{
+    justify-content: flex-start;
+    padding: 2rem;
+  }
+  #worksvideo{
+    margin: 0 2rem;
+  }
+}
+
 
 .contact {
     

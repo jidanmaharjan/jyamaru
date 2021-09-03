@@ -401,7 +401,6 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: justify;
 }
 
 .about-us h1 {
@@ -418,7 +417,7 @@ p {
 }
 
 .about-us .about-content img {
-  width: 100%;
+  width: 50%;
   padding: 0 2rem;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -447,6 +446,9 @@ p {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .about-us h1 {
+    margin: 2rem 0;
+  }
   .about-us .about-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -456,6 +458,9 @@ p {
         -ms-flex-align: center;
             align-items: center;
   }
+  .about-us .about-content img {
+    width: 100%;
+  }
   .about-us .about-content .about-paragraph {
     text-align: justify;
     margin-top: 1rem;
@@ -463,8 +468,8 @@ p {
 }
 
 .works {
-  padding-top: 6rem;
   width: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,35 +477,37 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
-}
-
-.works .slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
-.works .slider .leftcard {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+.works h1 {
+  margin-bottom: 2rem;
 }
 
-.works .slider .rightcard {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-}
-
-.works .slider .midcard {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
-}
-
-.works .slider img {
+#worksvideo {
   width: 100%;
+  border-radius: .5rem;
+  z-index: -1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 800px) {
+  .works {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 2rem;
+  }
+  #worksvideo {
+    margin: 0 2rem;
+  }
 }
 
 .contact {
